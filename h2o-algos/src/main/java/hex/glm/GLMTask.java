@@ -909,8 +909,9 @@ public abstract class GLMTask  {
         } else {
           double off = _dinfo._normSub == null?0:_dinfo._normSub[cid];
           c.getDoubles(vals,0,vals.length,NA);
-          for(int i = 0; i < vals.length; ++i)
-            ArrayUtils.wadd(g,etas[i],(vals[i] - off) * scale);
+          for(int i = 0; i < vals.length; ++i) {
+            ArrayUtils.wadd(g, etas[i], (vals[i] - off) * scale);
+          }
         }
       }
     }
